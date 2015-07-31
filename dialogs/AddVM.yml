@@ -1,0 +1,46 @@
+---
+- description: Add Vms
+  buttons: submit,cancel
+  label: AddVM
+  dialog_tabs:
+  - description: General
+    display: edit
+    label: General
+    display_method: 
+    display_method_options: 
+    position: 0
+    dialog_groups:
+    - description: General
+      display: edit
+      label: General
+      display_method: 
+      display_method_options: 
+      position: 0
+      dialog_fields:
+      - name: instance_count
+        description: Number of VMs
+        type: DialogFieldTextBox
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: '1'
+        values: 
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: Number of VMs
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        resource_action_fqname: ''

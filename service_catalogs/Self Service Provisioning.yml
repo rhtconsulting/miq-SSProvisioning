@@ -1,0 +1,64 @@
+---
+- Self Service Provisioning:
+    name: Self Service Provisioning
+    description: 
+    template:
+    - name: Provision Service
+      description: Provision Service
+      type: 
+      display: true
+      service_type: atomic
+      prov_type: generic
+      provision_cost: 
+      long_description: ''
+      options:
+        :button_order:
+        - cb-Add VM
+        - cb-Remove VM
+      service_template_catalog_name: Self Service Provisioning
+      resource_actions:
+      - action: Provision
+        ae_namespace: summit/Service/Provisioning/StateMachines
+        ae_class: ServiceProvision_Template
+        ae_instance: ProvisionService
+        ae_message: 
+        ae_attributes: {}
+        dialog_label: provision_mult_vm
+      - action: Reconfigure
+        ae_namespace: ''
+        ae_class: 
+        ae_instance: 
+        ae_message: 
+        ae_attributes: {}
+        dialog_label: provision_mult_vm
+      - action: Retirement
+        ae_namespace: ManageIQ/Service/Retirement/StateMachines
+        ae_class: ServiceRetirement
+        ae_instance: default
+        ae_message: 
+        ae_attributes: {}
+        dialog_label: provision_mult_vm
+      custom_buttons:
+      - description: Add VMs
+        applies_to_exp: 
+        options:
+          :button_image: 10
+          :display: true
+        userid: admin
+        wait_for_complete: 
+        name: Add VM
+        visibility:
+          :roles:
+          - _ALL_
+      - description: Remove A VM
+        applies_to_exp: 
+        options:
+          :button_image: 9
+          :display: true
+        userid: admin
+        wait_for_complete: 
+        name: Remove VM
+        visibility:
+          :roles:
+          - _ALL_
+      custom_button_sets: []

@@ -1,0 +1,205 @@
+---
+- description: Provision Service Multiple VMs
+  buttons: submit,cancel
+  label: provision_mult_vm
+  dialog_tabs:
+  - description: General
+    display: edit
+    label: General
+    display_method: 
+    display_method_options: 
+    position: 0
+    dialog_groups:
+    - description: General
+      display: edit
+      label: General
+      display_method: 
+      display_method_options: 
+      position: 0
+      dialog_fields:
+      - name: service_name
+        description: Service Name
+        type: DialogFieldTextBox
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: ''
+        values: 
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: Service Name
+        position: 0
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        resource_action_fqname: ''
+      - name: hostgroup
+        description: Hostgroup
+        type: DialogFieldDynamicList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options: {}
+        label: Hostgroup
+        position: 1
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: false
+        show_refresh_button: false
+        load_values_on_init: false
+        resource_action_fqname: "/summit/Integration/Satellite6/SatelliteServer/QueryHostGroups"
+      - name: vm_memory
+        description: Memory
+        type: DialogFieldTextBox
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: '2048'
+        values: 
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: Memory
+        position: 2
+        validator_type: 
+        validator_rule: 
+        reconfigurable: true
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        resource_action_fqname: ''
+      - name: number_of_sockets
+        description: Number of Sockets
+        type: DialogFieldTextBox
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: '1'
+        values: 
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: vCPUs
+        position: 3
+        validator_type: 
+        validator_rule: 
+        reconfigurable: true
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        resource_action_fqname: ''
+      - name: subnet
+        description: Subnet
+        type: DialogFieldDynamicList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options: {}
+        label: Subnet
+        position: 4
+        validator_type: 
+        validator_rule: 
+        reconfigurable: true
+        dynamic: false
+        show_refresh_button: false
+        load_values_on_init: false
+        resource_action_fqname: "/summit/Integration/Satellite6/SatelliteServer/QuerySubnets"
+      - name: domain_name
+        description: Domain Name
+        type: DialogFieldDynamicList
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: false
+        required_method: 
+        required_method_options: {}
+        default_value: 
+        values: []
+        values_method: 
+        values_method_options: {}
+        options: {}
+        label: Domain
+        position: 5
+        validator_type: 
+        validator_rule: 
+        reconfigurable: true
+        dynamic: false
+        show_refresh_button: false
+        load_values_on_init: false
+        resource_action_fqname: "/summit/Integration/Satellite6/SatelliteServer/QueryDomains"
+      - name: instance_count
+        description: 
+        type: DialogFieldTextBox
+        data_type: 
+        notes: 
+        notes_display: 
+        display: edit
+        display_method: 
+        display_method_options: {}
+        required: true
+        required_method: 
+        required_method_options: {}
+        default_value: '1'
+        values: 
+        values_method: 
+        values_method_options: {}
+        options:
+          :protected: false
+        label: Instance Count
+        position: 6
+        validator_type: 
+        validator_rule: 
+        reconfigurable: 
+        dynamic: false
+        show_refresh_button: 
+        load_values_on_init: 
+        resource_action_fqname: ''
