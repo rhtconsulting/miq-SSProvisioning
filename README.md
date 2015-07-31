@@ -5,6 +5,10 @@ This is provided as is.
 
 To install simply run the install script... ./install.sh
 
+NOTE:
+  This is a self-contained environment not a plug in.
+  
+  
 What gets installed:
 * A SSProvision Domain that is a self contained environment.  This domain name can be changed in the variable DOMAIN_NAME at the top
 * A Service catalog: Self Service Provisioning
